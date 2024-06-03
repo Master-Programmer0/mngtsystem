@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\employeeController;
+use App\Http\Controllers\newontroller;
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,6 +36,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/employees/{id}/edit', [\App\Http\Controllers\employeeController::class, 'edit'])->name('employees.edit');
     Route::patch('employee/{id}', [\App\Http\Controllers\employeeController::class, 'update'])->name('employee.update');
     Route::get('/employees/{id}/delete', [\App\Http\Controllers\employeeController::class, 'destroy'])->name('employees.destroy');
+
+    Route::get('newemployee', [\App\Http\Controllers\newcontroller::class, 'index'])->name('newemployee.index');
+    Route::post('newemployee', [\App\Http\Controllers\newcontroller::class, 'store'])->name('newemployee.store');
+    Route::get('employers', [\App\Http\Controllers\newcontroller::class, 'show'])->name('newemployee.show');
+    Route::get('/employees/{id}/edit', [\App\Http\Controllers\newcontroller::class, 'edit'])->name('newemployees.edit');
+    Route::patch('newemployee/{id}', [\App\Http\Controllers\newcontroller::class, 'update'])->name('newemployee.update');
+    Route::get('/employees/{id}/delete', [\App\Http\Controllers\newcontroller::class, 'destroy'])->name('newemployees.destroy');
 
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');

@@ -30,6 +30,15 @@
             </li>
 
             <li class="nav-item">
+                <a href="{{ route('newemployee.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>
+                        {{ __('New Employee Management') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon"></i>
                     <p>
