@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <h3 align="center" class="">BSIT LIST IN DHVSU APALIT</h3>
+        <h3 align="center" class="">BSIT LIST </h3>
 
         <div class="row">
             <div class="col-md-2">
